@@ -29,47 +29,17 @@ struct ContentView: View {
                         
                             ForEach(items, id: \.self) { item in
                                 VStack {
-                                /*
-                                CachedAsyncImage(url: URL(string: radioStations[item].image), content: { image in
-                                    image.resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 200, height: 200)
-                                        .cornerRadius(10)
-                                        .focusable(true)
-                                        .shadow(radius: 10)
-                                        .accessibility(label: Text(radioStations[item].name))
                                     
-                                }, placeholder: {
-                                    ProgressView()
-                                })*/
                                     Button(action: {
                                         
                                         print("Tapped \(radioStations[item].name)")
                                         
                                     }) {
                                         
-                                        CachedAsyncImage(url: URL(string: radioStations[item].image), content: { image in
-                                            image.resizable()
-                                                .aspectRatio(contentMode: .fill)
-                                                .frame(width: 200, height: 200)
-                                                .cornerRadius(10)
-                                                .focusable(true)
-                                                .shadow(radius: 10)
-                                                .accessibility(label: Text(radioStations[item].name))
-                                        }, placeholder: {
-                                            ProgressView()
-                                        })
-                                        
+                                        RadioStationImage(url: URL(string: radioStations[item].image) , accssibilityLabel: radioStations[item].name)
+  
                                     }
-                                    
                                 
-                                  /*
-                                    Text(radioStations[item].name)
-                                    .frame(width: 200, height: 100)
-                                    .background(Color.blue.opacity(0.5))
-                                    .cornerRadius(10)
-                                    .focusable(true)
-                                */
                             }
                         }
                     }
@@ -89,8 +59,35 @@ struct ContentView: View {
     }
 }
 
+struct RadioStationImage: View {
+    let url: URL?
+    let accssibilityLabel: String?
 
+    var body: some View {
+        CachedAsyncImage(url: url, content: { image in
+            image.resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 200, height: 200)
+                .cornerRadius(10)
+                .focusable(true)
+                .shadow(radius: 10)
+                //.accessibility(label: Text(radioStations[item].name))
+                .accessibility(label: Text(accssibilityLabel ?? "no information"))
+            
+        }, placeholder: {
+            ProgressView()
+        })
+    }
+}
     
+
+/*
+  Text(radioStations[item].name)
+  .frame(width: 200, height: 100)
+  .background(Color.blue.opacity(0.5))
+  .cornerRadius(10)
+  .focusable(true)
+*/
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
