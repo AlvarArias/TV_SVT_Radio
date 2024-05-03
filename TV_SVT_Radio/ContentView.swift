@@ -29,6 +29,7 @@ struct ContentView: View {
                         
                             ForEach(items, id: \.self) { item in
                                 VStack {
+                                /*
                                 CachedAsyncImage(url: URL(string: radioStations[item].image), content: { image in
                                     image.resizable()
                                         .aspectRatio(contentMode: .fill)
@@ -40,7 +41,28 @@ struct ContentView: View {
                                     
                                 }, placeholder: {
                                     ProgressView()
-                                })
+                                })*/
+                                    Button(action: {
+                                        
+                                        print("Tapped \(radioStations[item].name)")
+                                        
+                                    }) {
+                                        
+                                        CachedAsyncImage(url: URL(string: radioStations[item].image), content: { image in
+                                            image.resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                                .frame(width: 200, height: 200)
+                                                .cornerRadius(10)
+                                                .focusable(true)
+                                                .shadow(radius: 10)
+                                                .accessibility(label: Text(radioStations[item].name))
+                                        }, placeholder: {
+                                            ProgressView()
+                                        })
+                                        
+                                    }
+                                    
+                                
                                   /*
                                     Text(radioStations[item].name)
                                     .frame(width: 200, height: 100)
