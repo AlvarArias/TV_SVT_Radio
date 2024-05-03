@@ -34,16 +34,20 @@ struct ContentView: View {
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: 200, height: 200)
                                         .cornerRadius(10)
+                                        .focusable(true)
+                                        .shadow(radius: 10)
+                                        .accessibility(label: Text(radioStations[item].name))
+                                    
                                 }, placeholder: {
                                     ProgressView()
                                 })
-                                   
+                                  /*
                                     Text(radioStations[item].name)
                                     .frame(width: 200, height: 100)
                                     .background(Color.blue.opacity(0.5))
                                     .cornerRadius(10)
                                     .focusable(true)
-                                
+                                */
                             }
                         }
                     }
