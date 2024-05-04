@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		627185B62BE69A4000345F3D /* LoadRadioStationJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627185B52BE69A4000345F3D /* LoadRadioStationJSON.swift */; };
+		627185BC2BE6A06B00345F3D /* PlayRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627185BB2BE6A06B00345F3D /* PlayRadio.swift */; };
 		6283FFAC2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFAB2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift */; };
 		6283FFAE2BE4EDF500DA6626 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFAD2BE4EDF500DA6626 /* ContentView.swift */; };
 		6283FFB02BE4EDF800DA6626 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6283FFAF2BE4EDF800DA6626 /* Assets.xcassets */; };
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		627185B52BE69A4000345F3D /* LoadRadioStationJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadRadioStationJSON.swift; sourceTree = "<group>"; };
+		627185BB2BE6A06B00345F3D /* PlayRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRadio.swift; sourceTree = "<group>"; };
+		627185BD2BE6A3BC00345F3D /* TV-SVT-Radio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TV-SVT-Radio-Info.plist"; sourceTree = SOURCE_ROOT; };
 		6283FFA82BE4EDF500DA6626 /* TV_SVT_Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TV_SVT_Radio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6283FFAB2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_SVT_RadioApp.swift; sourceTree = "<group>"; };
 		6283FFAD2BE4EDF500DA6626 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 		6283FFAA2BE4EDF500DA6626 /* TV_SVT_Radio */ = {
 			isa = PBXGroup;
 			children = (
+				627185BD2BE6A3BC00345F3D /* TV-SVT-Radio-Info.plist */,
 				6283FFD52BE4EE7200DA6626 /* Model */,
 				6283FFAB2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift */,
 				6283FFAD2BE4EDF500DA6626 /* ContentView.swift */,
@@ -145,6 +149,7 @@
 				6283FFDA2BE4EF0300DA6626 /* LoadRadioStationJSONFile.swift */,
 				6283FFD82BE4EEA200DA6626 /* radioStationInfo.swift */,
 				6283FFD62BE4EE8A00DA6626 /* radios23.json */,
+				627185BB2BE6A06B00345F3D /* PlayRadio.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6283FFD92BE4EEA200DA6626 /* radioStationInfo.swift in Sources */,
+				627185BC2BE6A06B00345F3D /* PlayRadio.swift in Sources */,
 				6283FFDB2BE4EF0300DA6626 /* LoadRadioStationJSONFile.swift in Sources */,
 				6283FFAE2BE4EDF500DA6626 /* ContentView.swift in Sources */,
 				6283FFAC2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift in Sources */,
@@ -452,6 +458,7 @@
 				DEVELOPMENT_TEAM = DDWAVNG7Q4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TV-SVT-Radio-Info.plist";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -478,6 +485,7 @@
 				DEVELOPMENT_TEAM = DDWAVNG7Q4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TV-SVT-Radio-Info.plist";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (

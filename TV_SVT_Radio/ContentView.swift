@@ -14,7 +14,13 @@ struct ContentView: View {
     // Load Stations
     var mYradioStation = LoadRadioStationJSONFile()
     
+    // Play Radio
+    var playRadio = PlayRadio()
+    
     @State var radioStations: [radioStationInfo] = []
+    
+    @State var isPlaying = false
+   
 
     let items = 0...51
     
@@ -33,11 +39,21 @@ struct ContentView: View {
                                     Button(action: {
                                         
                                         print("Tapped \(radioStations[item].name)")
+                                       
+                                        isPlaying.toggle()
+                                        isPlaying = playRadio.playSongRadio(radioURL: radioStations[item].url, isPlaying: isPlaying)
+                                        print("isPlaying: \(isPlaying)")
                                         
                                     }) {
-                                        
-                                        RadioStationImage(url: URL(string: radioStations[item].image) , accssibilityLabel: radioStations[item].name)
-  
+                                        VStack {
+                                            RadioStationImage(url: URL(string: radioStations[item].image) , accssibilityLabel: radioStations[item].name)
+                                            
+                                            Text(String(radioStations[item].url))
+                                                .font(.headline)
+                                                .foregroundColor(.white)
+                                                .padding(.top, 10)
+                                            
+                                        }
                                     }
                                 
                             }
