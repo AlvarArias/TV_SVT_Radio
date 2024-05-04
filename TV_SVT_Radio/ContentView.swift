@@ -48,7 +48,7 @@ struct ContentView: View {
                                         VStack {
                                             RadioStationImage(url: URL(string: radioStations[item].image) , accssibilityLabel: radioStations[item].name)
                                             
-                                            Text(String(radioStations[item].url))
+                                            Text(radioStations[item].name)
                                                 .font(.headline)
                                                 .foregroundColor(.white)
                                                 .padding(.top, 10)
