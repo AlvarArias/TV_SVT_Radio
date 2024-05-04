@@ -12,28 +12,24 @@ class LoadRadioStationJSONFile {
     
     var radioStations: [radioStationInfo] = []
     
-    func loadStation() -> [radioStationInfo] {
+         func loadStation(fileName: String = "radios23") -> [radioStationInfo] {
         
-            guard let url = Bundle.main.url(forResource: "radios23", withExtension: "json") else {
-                
-    
-                return []
-            }
-
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                radioStations = try decoder.decode([radioStationInfo].self, from: data)
-    
-                return radioStations
-                
-            } catch {
-                print("Error loading radio stations: \(error)")
-                return []
-            }
-        
-        
+        guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
+            return []
         }
+
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            radioStations = try decoder.decode([radioStationInfo].self, from: data)
+    
+            return radioStations
+                
+        } catch {
+            print("Error loading radio stations: \(error)")
+            return []
+        }
+    }
     
 }
     
