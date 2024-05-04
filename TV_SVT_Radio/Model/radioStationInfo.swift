@@ -5,13 +5,6 @@
 //  Created by Alvar Arias on 2024-04-30.
 //
 
-import Foundation
-//
-//  RadioObj.swift
-//  playerSwiftUI
-//
-//  Created by Alvar Arias on 2021-12-07.
-//
 
 import Foundation
 import UIKit
