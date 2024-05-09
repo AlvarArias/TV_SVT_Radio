@@ -150,9 +150,9 @@
 		6283FFD52BE4EE7200DA6626 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6283FFD62BE4EE8A00DA6626 /* radios23.json */,
 				6283FFDA2BE4EF0300DA6626 /* LoadRadioStationJSONFile.swift */,
 				6283FFD82BE4EEA200DA6626 /* radioStationInfo.swift */,
-				6283FFD62BE4EE8A00DA6626 /* radios23.json */,
 				627185BB2BE6A06B00345F3D /* PlayRadio.swift */,
 			);
 			path = Model;
