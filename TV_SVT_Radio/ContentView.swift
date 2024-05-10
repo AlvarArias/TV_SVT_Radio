@@ -23,11 +23,11 @@ struct ContentView: View {
     
     @State var urlRadioStationHome : String = "http://sverigesradio.se/topsy/direkt/srapi/132.mp3"
     
-    @State var  urlImageRadioSelected : String = "https://static-cdn.sr.se/images/132/2186745_512_512.jpg"
+    @State var  urlImageRadioSelected : String = "https://static-cdn.sr.se/images/2384/c160e908-00ff-47f7-bdf7-0834100950e8.jpg"
     
-    @State var nameRadio : String = "P1"
+    @State var nameRadio : String = "SVT Radio"
     
-    @State var descriptionRadio : String = "Talat innehåll om samhälle, kultur och vetenskap. Kanalen erbjuder nyheter och aktualiteter, granskning och fördjupning men också livsåskådnings-och livsstilsprogram samt underhållning och upplevelser till exempel i form av teater."
+    @State var descriptionRadio : String = "API:t får användas till digitala tjänster där Sveriges Radios material länkas. Det kan användas för att t.ex. hämta poddflöden, kanalinformation eller annat  material som finns i API:t. Alla får använda API:t om villkoren efterföljs"
     
     @State var isFocused = false
     
@@ -43,29 +43,42 @@ struct ContentView: View {
                 .ignoresSafeArea()
             VStack {
                              
-                    if radioStations.count > 0 {
-                       
-                        HStack {
-                            
-                            
-                            RadioStationImage(url: URL(string: urlImageRadioSelected), accssibilityLabel: nameRadio)
-                            .frame(width: 200, height: 200)
-                            .padding(.top, 50)
-                            
-                            
-                            DetailView(text: nameRadio, textDescription: descriptionRadio, urlRadioStationHome: urlRadioStationHome, buttonIsPlaying: isPlaying)
-                            
-                            
-                        }
+                if radioStations.count > 0 {
+                    
+                    HStack {
+                        
+                        
+                        RadioStationImage(url: URL(string: urlImageRadioSelected), accssibilityLabel: nameRadio)
+                        
+                        
+                        
+                        DetailView(text: nameRadio, textDescription: descriptionRadio, urlRadioStationHome: urlRadioStationHome, buttonIsPlaying: isPlaying)
+                        
+                        
+                    }
+                    
+                    
+                    ScrollView(.vertical) {
                         
                         
                         ScrollView(.horizontal, showsIndicators: false) {
                             
+                            HStack {
+                                Text("Välj en station")
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .padding(.leading, 50)
+                                Spacer()
+                            }
+                            
                             LazyHStack(spacing: 20) {
-
+                                
                                 ForEach(items, id: \.self) { item in
+                                //ForEach(items.prefix(3), id: \.self) { item in
+                                //ForEach(0..<min(3, items.count)) { item in
+                                    
                                     VStack {
-
+                                        
                                         Button(action: {
                                             
                                             print("Tapped \(radioStations[item].name)")
@@ -83,28 +96,88 @@ struct ContentView: View {
                                             descriptionRadio = radioStations[item].tagline
                                             
                                         }){
+                                            
                                             VStack {
                                                 RadioStationImage(url: URL(string: radioStations[item].image) , accssibilityLabel: radioStations[item].name)
                                                     .frame(width: 200, height: 200)
-                                
-                                                  
                                                 
-                                                Text(radioStations[item].name)
-                                                    .font(.headline)
-                                                    .foregroundColor(.white)
-                                                    .padding(.top, 10)
+                                                
+                                                /*
+                                                 Text(radioStations[item].name)
+                                                 .font(.headline)
+                                                 .foregroundColor(.white)
+                                                 .padding(.top, 10)
+                                                 */
                                                 
                                             }
+                                            
+                                            
+                                            
                                         }
                                         
                                     }
                                 }
+                                
+                                
+                                
                             }
-                            .padding(.horizontal)
+                            .padding()
+                            
+                            LazyHStack(spacing: 20) {
+                                
+                                ForEach(items, id: \.self) { item in
+                                    
+                                    VStack {
+                                        
+                                        Button(action: {
+                                            
+                                            print("Tapped \(radioStations[item].name)")
+                                            
+                                            isPlaying.toggle()
+                                            
+                                            isPlaying = playRadio.playSongRadio(radioURL: radioStations[item].url, isPlaying: isPlaying)
+                                            
+                                            print("isPlaying: \(isPlaying)")
+                                            
+                                            urlImageRadioSelected = radioStations[item].image
+                                            
+                                            nameRadio = radioStations[item].name
+                                            
+                                            descriptionRadio = radioStations[item].tagline
+                                            
+                                        }){
+                                            
+                                            VStack {
+                                                RadioStationImage(url: URL(string: radioStations[item].image) , accssibilityLabel: radioStations[item].name)
+                                                    .frame(width: 200, height: 200)
+                                                
+                                                
+                                                /*
+                                                 Text(radioStations[item].name)
+                                                 .font(.headline)
+                                                 .foregroundColor(.white)
+                                                 .padding(.top, 10)
+                                                 */
+                                                
+                                            }
+                                            
+                                            
+                                            
+                                        }
+                                        
+                                    }
+                                }
+                                
+                                
+                                
+                            }
+                            .padding()
+                            
+                            
                         }
                     }
-                
-                
+                    
+                }
                
                 
                 }
@@ -179,7 +252,7 @@ struct DetailView: View {
                     .frame(width: 600, alignment: .leading)
                     
                 
-                
+ /*
                 Button(action: {
                     
                     buttonIsPlaying.toggle()
@@ -196,7 +269,7 @@ struct DetailView: View {
                         .focusable(true)
                 }
                 
-                
+*/
             }
 
     }

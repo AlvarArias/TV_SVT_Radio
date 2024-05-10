@@ -11,6 +11,7 @@
 		627185BC2BE6A06B00345F3D /* PlayRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627185BB2BE6A06B00345F3D /* PlayRadio.swift */; };
 		627185C02BE6AA3300345F3D /* PlayRadioTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627185BF2BE6AA3300345F3D /* PlayRadioTest.swift */; };
 		627185C12BE6ABE700345F3D /* PlayRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627185BB2BE6A06B00345F3D /* PlayRadio.swift */; };
+		627492C02BEDE9D200696A97 /* music-equalizer.json in Resources */ = {isa = PBXBuildFile; fileRef = 627492BF2BEDE9D200696A97 /* music-equalizer.json */; };
 		6283FFAC2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFAB2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift */; };
 		6283FFAE2BE4EDF500DA6626 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFAD2BE4EDF500DA6626 /* ContentView.swift */; };
 		6283FFB02BE4EDF800DA6626 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6283FFAF2BE4EDF800DA6626 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		627185BB2BE6A06B00345F3D /* PlayRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRadio.swift; sourceTree = "<group>"; };
 		627185BD2BE6A3BC00345F3D /* TV-SVT-Radio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TV-SVT-Radio-Info.plist"; sourceTree = SOURCE_ROOT; };
 		627185BF2BE6AA3300345F3D /* PlayRadioTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRadioTest.swift; sourceTree = "<group>"; };
+		627492BF2BEDE9D200696A97 /* music-equalizer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "music-equalizer.json"; sourceTree = "<group>"; };
 		6283FFA82BE4EDF500DA6626 /* TV_SVT_Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TV_SVT_Radio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6283FFAB2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_SVT_RadioApp.swift; sourceTree = "<group>"; };
 		6283FFAD2BE4EDF500DA6626 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		627492BE2BEDE9B900696A97 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				627492BF2BEDE9D200696A97 /* music-equalizer.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		6283FF9F2BE4EDF500DA6626 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 		6283FFAA2BE4EDF500DA6626 /* TV_SVT_Radio */ = {
 			isa = PBXGroup;
 			children = (
+				627492BE2BEDE9B900696A97 /* Assets */,
 				627185BD2BE6A3BC00345F3D /* TV-SVT-Radio-Info.plist */,
 				6283FFD52BE4EE7200DA6626 /* Model */,
 				6283FFAB2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift */,
@@ -268,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				627492C02BEDE9D200696A97 /* music-equalizer.json in Resources */,
 				6283FFD72BE4EE8A00DA6626 /* radios23.json in Resources */,
 				6283FFB32BE4EDF800DA6626 /* Preview Assets.xcassets in Resources */,
 				6283FFB02BE4EDF800DA6626 /* Assets.xcassets in Resources */,
