@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct buttonFeedback: View {
+    
+    var buttonName : String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            print("Button was pressed \(buttonName)")
+        }) {
+            Text(buttonName)
+        }
     }
 }
 
+/*
 #Preview {
     buttonFeedback()
 }
+*/
+
+

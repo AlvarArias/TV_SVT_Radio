@@ -316,6 +316,10 @@ struct ContentView: View {
                             }
                             .padding()
                             
+                            HStack {
+                                buttonFeedback(buttonName: "Om appen")
+                                buttonFeedback(buttonName: "Feedback")
+                            }
                         }
                     }
                     

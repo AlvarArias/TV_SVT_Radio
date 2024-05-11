@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		621124E72BEE3D0C00E0FC9E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 621124E62BEE3D0C00E0FC9E /* Lottie */; };
 		621124E92BEE44C300E0FC9E /* play.json in Resources */ = {isa = PBXBuildFile; fileRef = 621124E82BEE44C300E0FC9E /* play.json */; };
+		626FA91B2BEFBBEA001D84C4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626FA91A2BEFBBEA001D84C4 /* Colors.swift */; };
+		626FA91D2BEFBE7E001D84C4 /* InitialValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626FA91C2BEFBE7E001D84C4 /* InitialValues.swift */; };
+		626FA9202BEFBFBC001D84C4 /* buttonFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626FA91F2BEFBFBC001D84C4 /* buttonFeedback.swift */; };
 		627185B62BE69A4000345F3D /* LoadRadioStationJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627185B52BE69A4000345F3D /* LoadRadioStationJSON.swift */; };
 		627185BC2BE6A06B00345F3D /* PlayRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627185BB2BE6A06B00345F3D /* PlayRadio.swift */; };
 		627185C02BE6AA3300345F3D /* PlayRadioTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627185BF2BE6AA3300345F3D /* PlayRadioTest.swift */; };
@@ -47,6 +50,9 @@
 
 /* Begin PBXFileReference section */
 		621124E82BEE44C300E0FC9E /* play.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = play.json; sourceTree = "<group>"; };
+		626FA91A2BEFBBEA001D84C4 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		626FA91C2BEFBE7E001D84C4 /* InitialValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialValues.swift; sourceTree = "<group>"; };
+		626FA91F2BEFBFBC001D84C4 /* buttonFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonFeedback.swift; sourceTree = "<group>"; };
 		627185B52BE69A4000345F3D /* LoadRadioStationJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadRadioStationJSON.swift; sourceTree = "<group>"; };
 		627185BB2BE6A06B00345F3D /* PlayRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRadio.swift; sourceTree = "<group>"; };
 		627185BD2BE6A3BC00345F3D /* TV-SVT-Radio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TV-SVT-Radio-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -103,13 +109,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		627492BE2BEDE9B900696A97 /* Assets */ = {
+		626FA9182BEFBAAD001D84C4 /* animations */ = {
 			isa = PBXGroup;
 			children = (
 				627492BF2BEDE9D200696A97 /* music-equalizer.json */,
 				628311C42BEF2E61007BD9E2 /* play2.gif */,
 				628311C22BEF2E45007BD9E2 /* play1.lottie */,
 				621124E82BEE44C300E0FC9E /* play.json */,
+			);
+			path = animations;
+			sourceTree = "<group>";
+		};
+		626FA9192BEFBBD0001D84C4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				626FA91A2BEFBBEA001D84C4 /* Colors.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		626FA91E2BEFBF9A001D84C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6283FFAD2BE4EDF500DA6626 /* ContentView.swift */,
+				626FA91F2BEFBFBC001D84C4 /* buttonFeedback.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		627492BE2BEDE9B900696A97 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				626FA9182BEFBAAD001D84C4 /* animations */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -138,11 +169,12 @@
 		6283FFAA2BE4EDF500DA6626 /* TV_SVT_Radio */ = {
 			isa = PBXGroup;
 			children = (
+				626FA9192BEFBBD0001D84C4 /* Helpers */,
 				627492BE2BEDE9B900696A97 /* Assets */,
 				627185BD2BE6A3BC00345F3D /* TV-SVT-Radio-Info.plist */,
 				6283FFD52BE4EE7200DA6626 /* Model */,
 				6283FFAB2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift */,
-				6283FFAD2BE4EDF500DA6626 /* ContentView.swift */,
+				626FA91E2BEFBF9A001D84C4 /* Views */,
 				6283FFAF2BE4EDF800DA6626 /* Assets.xcassets */,
 				6283FFB12BE4EDF800DA6626 /* Preview Content */,
 			);
@@ -183,6 +215,7 @@
 				6283FFDA2BE4EF0300DA6626 /* LoadRadioStationJSONFile.swift */,
 				6283FFD82BE4EEA200DA6626 /* radioStationInfo.swift */,
 				627185BB2BE6A06B00345F3D /* PlayRadio.swift */,
+				626FA91C2BEFBE7E001D84C4 /* InitialValues.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -329,9 +362,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				626FA9202BEFBFBC001D84C4 /* buttonFeedback.swift in Sources */,
 				6283FFD92BE4EEA200DA6626 /* radioStationInfo.swift in Sources */,
+				626FA91B2BEFBBEA001D84C4 /* Colors.swift in Sources */,
 				627185BC2BE6A06B00345F3D /* PlayRadio.swift in Sources */,
 				6283FFDB2BE4EF0300DA6626 /* LoadRadioStationJSONFile.swift in Sources */,
+				626FA91D2BEFBE7E001D84C4 /* InitialValues.swift in Sources */,
 				6283FFAE2BE4EDF500DA6626 /* ContentView.swift in Sources */,
 				6283FFAC2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift in Sources */,
 			);
