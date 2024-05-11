@@ -24,11 +24,12 @@ struct ContentView: View {
     
     @State var urlRadioStationHome : String = "http://sverigesradio.se/topsy/direkt/srapi/132.mp3"
     
-    @State var  urlImageRadioSelected : String = "https://static-cdn.sr.se/images/2384/c160e908-00ff-47f7-bdf7-0834100950e8.jpg"
+    //@State var  urlImageRadioSelected : String = "https://static-cdn.sr.se/images/2384/c160e908-00ff-47f7-bdf7-0834100950e8.jpg"
+    @State var  urlImageRadioSelected : String = "https://user-images.githubusercontent.com/7523384/121326895-3ffc6800-c913-11eb-842f-62ff6dd24591.png"
     
-    @State var nameRadio : String = "SVT Radio"
+    @State var nameRadio : String = "TV SVT Radio player"
     
-    @State var descriptionRadio : String = "API:t får användas till digitala tjänster där Sveriges Radios material länkas. Det kan användas för att t.ex. hämta poddflöden, kanalinformation eller annat  material som finns i API:t. Alla får använda API:t om villkoren efterföljs"
+    @State var descriptionRadio : String = "This is a radio player for Sweden radio service, you can choose your radio Station"
     
     @State var isFocused = false
 
@@ -39,7 +40,7 @@ struct ContentView: View {
         
         
         ZStack {
-            Color.orange
+            Color.orange.opacity(0.9)
                 .ignoresSafeArea()
             VStack {
                              
@@ -62,8 +63,13 @@ struct ContentView: View {
                             }
                         }
                         
-                        
-                        DetailView(text: nameRadio, textDescription: descriptionRadio, urlRadioStationHome: urlRadioStationHome, buttonIsPlaying: isPlaying)
+                        VStack {
+                            DetailView(text: nameRadio, textDescription: descriptionRadio, urlRadioStationHome: urlRadioStationHome, buttonIsPlaying: isPlaying)
+                                .padding(.bottom, 70)
+                           
+                            
+                        }
+                      
 
                     }
                     
