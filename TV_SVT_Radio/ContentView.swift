@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CachedAsyncImage
+import Lottie
 
 
 struct ContentView: View {
@@ -30,13 +31,12 @@ struct ContentView: View {
     @State var descriptionRadio : String = "API:t får användas till digitala tjänster där Sveriges Radios material länkas. Det kan användas för att t.ex. hämta poddflöden, kanalinformation eller annat  material som finns i API:t. Alla får använda API:t om villkoren efterföljs"
     
     @State var isFocused = false
-    
-   
-    
-   
+
     let items = 0...51
     
+    
     var body: some View {
+        
         
         ZStack {
             Color.orange
@@ -47,14 +47,24 @@ struct ContentView: View {
                     
                     HStack {
                         
-                        
-                        RadioStationImage(url: URL(string: urlImageRadioSelected), accssibilityLabel: nameRadio)
-                        
+                        VStack {
+                            
+                            RadioStationImage(url: URL(string: urlImageRadioSelected), accssibilityLabel: nameRadio)
+                            
+                            
+                            if isPlaying {
+                                LottieView(animation: .named("play"))
+                                    .playing(loopMode: .loop)
+                                    .frame(width: 100, height: 100)
+                            } else {
+                                LottieView(animation: .named("play"))
+                                    .frame(width: 100, height: 100)
+                            }
+                        }
                         
                         
                         DetailView(text: nameRadio, textDescription: descriptionRadio, urlRadioStationHome: urlRadioStationHome, buttonIsPlaying: isPlaying)
-                        
-                        
+
                     }
                     
                     
@@ -73,10 +83,57 @@ struct ContentView: View {
                             
                             LazyHStack(spacing: 20) {
                                 
-                                ForEach(items, id: \.self) { item in
-                                //ForEach(items.prefix(3), id: \.self) { item in
-                                //ForEach(0..<min(3, items.count)) { item in
-                                    
+                                ForEach(items.clamped(to: 0...5), id: \.self) { item in
+                                                
+                                    VStack(alignment: .leading) {
+                                        
+                                        Button(action: {
+                                            
+                                            print("Tapped \(radioStations[item].name)")
+                                            
+                                            isPlaying.toggle()
+                                            
+                                            isPlaying = playRadio.playSongRadio(radioURL: radioStations[item].url, isPlaying: isPlaying)
+                                            
+                                            print("isPlaying: \(isPlaying)")
+                                            
+                                            urlImageRadioSelected = radioStations[item].image
+                                            
+                                            nameRadio = radioStations[item].name
+                                            
+                                            descriptionRadio = radioStations[item].tagline
+                                            
+                                        }){
+                                            
+                                            VStack {
+                                                RadioStationImage(url: URL(string: radioStations[item].image) , accssibilityLabel: radioStations[item].name)
+                                                    .frame(width: 200, height: 200)
+                                                
+                                                
+                                                
+                                                 Text(radioStations[item].name)
+                                                    .font(.caption)
+                                                 .foregroundColor(.white)
+                                                 .padding(.top, 10)
+                                                
+                                                
+                                            }
+                                  
+                                        }
+                                        
+                                    }
+                                }
+                                
+                                
+                                
+                            }
+                            .padding()
+                            
+
+                            LazyHStack(spacing: 20) {
+                                
+                                ForEach(items.clamped(to: 6...11), id: \.self) { item in
+                                  
                                     VStack {
                                         
                                         Button(action: {
@@ -102,31 +159,71 @@ struct ContentView: View {
                                                     .frame(width: 200, height: 200)
                                                 
                                                 
-                                                /*
+                                                
                                                  Text(radioStations[item].name)
-                                                 .font(.headline)
+                                                 .font(.caption)
                                                  .foregroundColor(.white)
                                                  .padding(.top, 10)
-                                                 */
-                                                
+                                     
                                             }
-                                            
-                                            
-                                            
+                                      
                                         }
                                         
                                     }
                                 }
+                                           
+                            }
+                            .padding()
+                      
+                            LazyHStack(spacing: 20) {
                                 
-                                
-                                
+                                ForEach(items.clamped(to: 12...17), id: \.self) { item in
+                                  
+                                    VStack {
+                                        
+                                        Button(action: {
+                                            
+                                            print("Tapped \(radioStations[item].name)")
+                                            
+                                            isPlaying.toggle()
+                                            
+                                            isPlaying = playRadio.playSongRadio(radioURL: radioStations[item].url, isPlaying: isPlaying)
+                                            
+                                            print("isPlaying: \(isPlaying)")
+                                            
+                                            urlImageRadioSelected = radioStations[item].image
+                                            
+                                            nameRadio = radioStations[item].name
+                                            
+                                            descriptionRadio = radioStations[item].tagline
+                                            
+                                        }){
+                                            
+                                            VStack {
+                                                RadioStationImage(url: URL(string: radioStations[item].image) , accssibilityLabel: radioStations[item].name)
+                                                    .frame(width: 200, height: 200)
+                                                
+                                                
+                                                
+                                                 Text(radioStations[item].name)
+                                                 .font(.caption)
+                                                 .foregroundColor(.white)
+                                                 .padding(.top, 10)
+                                     
+                                            }
+                                      
+                                        }
+                                        
+                                    }
+                                }
+                                           
                             }
                             .padding()
                             
                             LazyHStack(spacing: 20) {
                                 
-                                ForEach(items, id: \.self) { item in
-                                    
+                                ForEach(items.clamped(to: 18...23), id: \.self) { item in
+                                  
                                     VStack {
                                         
                                         Button(action: {
@@ -152,27 +249,66 @@ struct ContentView: View {
                                                     .frame(width: 200, height: 200)
                                                 
                                                 
-                                                /*
+                                                
                                                  Text(radioStations[item].name)
-                                                 .font(.headline)
+                                                 .font(.caption)
                                                  .foregroundColor(.white)
                                                  .padding(.top, 10)
-                                                 */
-                                                
+                                     
                                             }
-                                            
-                                            
-                                            
+                                      
                                         }
                                         
                                     }
                                 }
-                                
-                                
-                                
+                                           
                             }
                             .padding()
                             
+                            LazyHStack(spacing: 20) {
+                                
+                                ForEach(items.clamped(to: 24...29), id: \.self) { item in
+                                  
+                                    VStack {
+                                        
+                                        Button(action: {
+                                            
+                                            print("Tapped \(radioStations[item].name)")
+                                            
+                                            isPlaying.toggle()
+                                            
+                                            isPlaying = playRadio.playSongRadio(radioURL: radioStations[item].url, isPlaying: isPlaying)
+                                            
+                                            print("isPlaying: \(isPlaying)")
+                                            
+                                            urlImageRadioSelected = radioStations[item].image
+                                            
+                                            nameRadio = radioStations[item].name
+                                            
+                                            descriptionRadio = radioStations[item].tagline
+                                            
+                                        }){
+                                            
+                                            VStack {
+                                                RadioStationImage(url: URL(string: radioStations[item].image) , accssibilityLabel: radioStations[item].name)
+                                                    .frame(width: 200, height: 200)
+                                                
+                                                
+                                                
+                                                 Text(radioStations[item].name)
+                                                 .font(.caption)
+                                                 .foregroundColor(.white)
+                                                 .padding(.top, 10)
+                                     
+                                            }
+                                      
+                                        }
+                                        
+                                    }
+                                }
+                                           
+                            }
+                            .padding()
                             
                         }
                     }
@@ -251,25 +387,7 @@ struct DetailView: View {
                     .padding(.bottom, 10)
                     .frame(width: 600, alignment: .leading)
                     
-                
- /*
-                Button(action: {
-                    
-                    buttonIsPlaying.toggle()
-                    buttonIsPlaying = playRadio.playSongRadio(radioURL: urlRadioStationHome, isPlaying: buttonIsPlaying)
-                    print("buttonIsPlaying: \(buttonIsPlaying)")
-                    
-                }) {
-                    
-                    Image(systemName: buttonIsPlaying ? "pause.fill" : "play.fill")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                        .foregroundColor(.white)
-                        .padding(.leading, 10)
-                        .focusable(true)
-                }
-                
-*/
+            
             }
 
     }

@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		621124E72BEE3D0C00E0FC9E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 621124E62BEE3D0C00E0FC9E /* Lottie */; };
+		621124E92BEE44C300E0FC9E /* play.json in Resources */ = {isa = PBXBuildFile; fileRef = 621124E82BEE44C300E0FC9E /* play.json */; };
 		627185B62BE69A4000345F3D /* LoadRadioStationJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627185B52BE69A4000345F3D /* LoadRadioStationJSON.swift */; };
 		627185BC2BE6A06B00345F3D /* PlayRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627185BB2BE6A06B00345F3D /* PlayRadio.swift */; };
 		627185C02BE6AA3300345F3D /* PlayRadioTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627185BF2BE6AA3300345F3D /* PlayRadioTest.swift */; };
 		627185C12BE6ABE700345F3D /* PlayRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627185BB2BE6A06B00345F3D /* PlayRadio.swift */; };
 		627492C02BEDE9D200696A97 /* music-equalizer.json in Resources */ = {isa = PBXBuildFile; fileRef = 627492BF2BEDE9D200696A97 /* music-equalizer.json */; };
+		628311C52BEF2E61007BD9E2 /* play2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 628311C42BEF2E61007BD9E2 /* play2.gif */; };
 		6283FFAC2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFAB2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift */; };
 		6283FFAE2BE4EDF500DA6626 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFAD2BE4EDF500DA6626 /* ContentView.swift */; };
 		6283FFB02BE4EDF800DA6626 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6283FFAF2BE4EDF800DA6626 /* Assets.xcassets */; };
@@ -43,11 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		621124E82BEE44C300E0FC9E /* play.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = play.json; sourceTree = "<group>"; };
 		627185B52BE69A4000345F3D /* LoadRadioStationJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadRadioStationJSON.swift; sourceTree = "<group>"; };
 		627185BB2BE6A06B00345F3D /* PlayRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRadio.swift; sourceTree = "<group>"; };
 		627185BD2BE6A3BC00345F3D /* TV-SVT-Radio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TV-SVT-Radio-Info.plist"; sourceTree = SOURCE_ROOT; };
 		627185BF2BE6AA3300345F3D /* PlayRadioTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRadioTest.swift; sourceTree = "<group>"; };
 		627492BF2BEDE9D200696A97 /* music-equalizer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "music-equalizer.json"; sourceTree = "<group>"; };
+		628311C22BEF2E45007BD9E2 /* play1.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = play1.lottie; sourceTree = "<group>"; };
+		628311C42BEF2E61007BD9E2 /* play2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = play2.gif; sourceTree = "<group>"; };
 		6283FFA82BE4EDF500DA6626 /* TV_SVT_Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TV_SVT_Radio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6283FFAB2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_SVT_RadioApp.swift; sourceTree = "<group>"; };
 		6283FFAD2BE4EDF500DA6626 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6283FFDE2BE4F05800DA6626 /* CachedAsyncImage in Frameworks */,
+				621124E72BEE3D0C00E0FC9E /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,10 +96,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		621124E52BEE3D0200E0FC9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		627492BE2BEDE9B900696A97 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 				627492BF2BEDE9D200696A97 /* music-equalizer.json */,
+				628311C42BEF2E61007BD9E2 /* play2.gif */,
+				628311C22BEF2E45007BD9E2 /* play1.lottie */,
+				621124E82BEE44C300E0FC9E /* play.json */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -104,6 +121,7 @@
 				6283FFBB2BE4EDF800DA6626 /* TV_SVT_RadioTests */,
 				6283FFC52BE4EDF800DA6626 /* TV_SVT_RadioUITests */,
 				6283FFA92BE4EDF500DA6626 /* Products */,
+				621124E52BEE3D0200E0FC9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,6 +205,7 @@
 			name = TV_SVT_Radio;
 			packageProductDependencies = (
 				6283FFDD2BE4F05800DA6626 /* CachedAsyncImage */,
+				621124E62BEE3D0C00E0FC9E /* Lottie */,
 			);
 			productName = TV_SVT_Radio;
 			productReference = 6283FFA82BE4EDF500DA6626 /* TV_SVT_Radio.app */;
@@ -262,6 +281,7 @@
 			mainGroup = 6283FF9F2BE4EDF500DA6626;
 			packageReferences = (
 				6283FFDC2BE4F05800DA6626 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				621124E42BEE3B1800E0FC9E /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 6283FFA92BE4EDF500DA6626 /* Products */;
 			projectDirPath = "";
@@ -279,10 +299,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				621124E92BEE44C300E0FC9E /* play.json in Resources */,
 				627492C02BEDE9D200696A97 /* music-equalizer.json in Resources */,
 				6283FFD72BE4EE8A00DA6626 /* radios23.json in Resources */,
 				6283FFB32BE4EDF800DA6626 /* Preview Assets.xcassets in Resources */,
 				6283FFB02BE4EDF800DA6626 /* Assets.xcassets in Resources */,
+				628311C52BEF2E61007BD9E2 /* play2.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +659,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		621124E42BEE3B1800E0FC9E /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
 		6283FFDC2BE4F05800DA6626 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
@@ -648,6 +678,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		621124E62BEE3D0C00E0FC9E /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 621124E42BEE3B1800E0FC9E /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		6283FFDD2BE4F05800DA6626 /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6283FFDC2BE4F05800DA6626 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
