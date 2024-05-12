@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "miRadio400x240.png",
       "idiom" : "tv",
       "scale" : "1x"
     },
     {
+      "filename" : "miRadio800x480.png",
       "idiom" : "tv",
       "scale" : "2x"
     }

@@ -22,14 +22,15 @@ struct ContentView: View {
     
     @State var isPlaying = false
     
-    @State var urlRadioStationHome : String = "http://sverigesradio.se/topsy/direkt/srapi/132.mp3"
+    @State var myTest = test
     
-    //@State var  urlImageRadioSelected : String = "https://static-cdn.sr.se/images/2384/c160e908-00ff-47f7-bdf7-0834100950e8.jpg"
-    @State var  urlImageRadioSelected : String = "https://user-images.githubusercontent.com/7523384/121326895-3ffc6800-c913-11eb-842f-62ff6dd24591.png"
+    @State var urlRadioStationHome : String = myUrlRadioStationHome
     
-    @State var nameRadio : String = "TV SVT Radio player"
+    @State var  urlImageRadioSelected : String = myUrlImageRadioSelected
     
-    @State var descriptionRadio : String = "This is a radio player for Sweden radio service, you can choose your radio Station"
+    @State var nameRadio : String = myNameRadio
+   
+    @State var descriptionRadio : String = myDescriptionRadio
     
     @State var isFocused = false
 

@@ -123,6 +123,7 @@
 		626FA9192BEFBBD0001D84C4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				626FA91C2BEFBE7E001D84C4 /* InitialValues.swift */,
 				626FA91A2BEFBBEA001D84C4 /* Colors.swift */,
 			);
 			path = Helpers;
@@ -140,6 +141,7 @@
 		627492BE2BEDE9B900696A97 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6283FFAF2BE4EDF800DA6626 /* Assets.xcassets */,
 				626FA9182BEFBAAD001D84C4 /* animations */,
 			);
 			path = Assets;
@@ -175,7 +177,6 @@
 				6283FFD52BE4EE7200DA6626 /* Model */,
 				6283FFAB2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift */,
 				626FA91E2BEFBF9A001D84C4 /* Views */,
-				6283FFAF2BE4EDF800DA6626 /* Assets.xcassets */,
 				6283FFB12BE4EDF800DA6626 /* Preview Content */,
 			);
 			path = TV_SVT_Radio;
@@ -215,7 +216,6 @@
 				6283FFDA2BE4EF0300DA6626 /* LoadRadioStationJSONFile.swift */,
 				6283FFD82BE4EEA200DA6626 /* radioStationInfo.swift */,
 				627185BB2BE6A06B00345F3D /* PlayRadio.swift */,
-				626FA91C2BEFBE7E001D84C4 /* InitialValues.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
