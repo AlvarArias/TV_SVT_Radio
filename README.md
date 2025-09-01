@@ -35,7 +35,7 @@ Abre la app, selecciona un canal o estación y comienza a disfrutar del contenid
 
 ## Licencia
 
-Este proyecto actualmente no tiene una licencia definida.
+Este proyecto está bajo la licencia [MIT](LICENSE).
 
 ---
 
