@@ -21,7 +21,6 @@
 		6283FFAC2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFAB2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift */; };
 		6283FFAE2BE4EDF500DA6626 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFAD2BE4EDF500DA6626 /* ContentView.swift */; };
 		6283FFB02BE4EDF800DA6626 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6283FFAF2BE4EDF800DA6626 /* Assets.xcassets */; };
-		6283FFB32BE4EDF800DA6626 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6283FFB22BE4EDF800DA6626 /* Preview Assets.xcassets */; };
 		6283FFBD2BE4EDF800DA6626 /* TV_SVT_RadioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFBC2BE4EDF800DA6626 /* TV_SVT_RadioTests.swift */; };
 		6283FFC72BE4EDF800DA6626 /* TV_SVT_RadioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFC62BE4EDF800DA6626 /* TV_SVT_RadioUITests.swift */; };
 		6283FFC92BE4EDF800DA6626 /* TV_SVT_RadioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFC82BE4EDF800DA6626 /* TV_SVT_RadioUITestsLaunchTests.swift */; };
@@ -55,7 +54,7 @@
 		626FA91F2BEFBFBC001D84C4 /* buttonFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonFeedback.swift; sourceTree = "<group>"; };
 		627185B52BE69A4000345F3D /* LoadRadioStationJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadRadioStationJSON.swift; sourceTree = "<group>"; };
 		627185BB2BE6A06B00345F3D /* PlayRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRadio.swift; sourceTree = "<group>"; };
-		627185BD2BE6A3BC00345F3D /* TV-SVT-Radio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TV-SVT-Radio-Info.plist"; sourceTree = SOURCE_ROOT; };
+		627185BD2BE6A3BC00345F3D /* TV-SVT-Radio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TV-SVT-Radio-Info.plist"; path = "TV_SVT_Radio/Resources/TV-SVT-Radio-Info.plist"; sourceTree = SOURCE_ROOT; };
 		627185BF2BE6AA3300345F3D /* PlayRadioTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRadioTest.swift; sourceTree = "<group>"; };
 		627492BF2BEDE9D200696A97 /* music-equalizer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "music-equalizer.json"; sourceTree = "<group>"; };
 		628311C22BEF2E45007BD9E2 /* play1.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = play1.lottie; sourceTree = "<group>"; };
@@ -64,7 +63,6 @@
 		6283FFAB2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_SVT_RadioApp.swift; sourceTree = "<group>"; };
 		6283FFAD2BE4EDF500DA6626 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6283FFAF2BE4EDF800DA6626 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6283FFB22BE4EDF800DA6626 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6283FFB82BE4EDF800DA6626 /* TV_SVT_RadioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TV_SVT_RadioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6283FFBC2BE4EDF800DA6626 /* TV_SVT_RadioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_SVT_RadioTests.swift; sourceTree = "<group>"; };
 		6283FFC22BE4EDF800DA6626 /* TV_SVT_RadioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TV_SVT_RadioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,15 +118,6 @@
 			path = animations;
 			sourceTree = "<group>";
 		};
-		626FA9192BEFBBD0001D84C4 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				626FA91C2BEFBE7E001D84C4 /* InitialValues.swift */,
-				626FA91A2BEFBBEA001D84C4 /* Colors.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		626FA91E2BEFBF9A001D84C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,18 +127,51 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		627492BE2BEDE9B900696A97 /* Assets */ = {
+		62815A7F2E65929100154571 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				627185BD2BE6A3BC00345F3D /* TV-SVT-Radio-Info.plist */,
 				6283FFAF2BE4EDF800DA6626 /* Assets.xcassets */,
 				626FA9182BEFBAAD001D84C4 /* animations */,
 			);
-			path = Assets;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		62815A802E6592E000154571 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6283FFD52BE4EE7200DA6626 /* Model */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		62815A812E6592EF00154571 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		62815A822E65931800154571 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		62815A832E65932E00154571 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				626FA91C2BEFBE7E001D84C4 /* InitialValues.swift */,
+				626FA91A2BEFBBEA001D84C4 /* Colors.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		6283FF9F2BE4EDF500DA6626 = {
 			isa = PBXGroup;
 			children = (
+				6283FFAB2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift */,
 				6283FFAA2BE4EDF500DA6626 /* TV_SVT_Radio */,
 				6283FFBB2BE4EDF800DA6626 /* TV_SVT_RadioTests */,
 				6283FFC52BE4EDF800DA6626 /* TV_SVT_RadioUITests */,
@@ -171,23 +193,14 @@
 		6283FFAA2BE4EDF500DA6626 /* TV_SVT_Radio */ = {
 			isa = PBXGroup;
 			children = (
-				626FA9192BEFBBD0001D84C4 /* Helpers */,
-				627492BE2BEDE9B900696A97 /* Assets */,
-				627185BD2BE6A3BC00345F3D /* TV-SVT-Radio-Info.plist */,
-				6283FFD52BE4EE7200DA6626 /* Model */,
-				6283FFAB2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift */,
+				62815A7F2E65929100154571 /* Resources */,
+				62815A802E6592E000154571 /* Models */,
 				626FA91E2BEFBF9A001D84C4 /* Views */,
-				6283FFB12BE4EDF800DA6626 /* Preview Content */,
+				62815A812E6592EF00154571 /* ViewControllers */,
+				62815A822E65931800154571 /* Networking */,
+				62815A832E65932E00154571 /* Utils */,
 			);
 			path = TV_SVT_Radio;
-			sourceTree = "<group>";
-		};
-		6283FFB12BE4EDF800DA6626 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				6283FFB22BE4EDF800DA6626 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		6283FFBB2BE4EDF800DA6626 /* TV_SVT_RadioTests */ = {
@@ -335,7 +348,6 @@
 				621124E92BEE44C300E0FC9E /* play.json in Resources */,
 				627492C02BEDE9D200696A97 /* music-equalizer.json in Resources */,
 				6283FFD72BE4EE8A00DA6626 /* radios23.json in Resources */,
-				6283FFB32BE4EDF800DA6626 /* Preview Assets.xcassets in Resources */,
 				6283FFB02BE4EDF800DA6626 /* Assets.xcassets in Resources */,
 				628311C52BEF2E61007BD9E2 /* play2.gif in Resources */,
 			);

@@ -22,7 +22,7 @@ struct ContentView: View {
     
     @State var isPlaying = false
     
-    @State var myTest = test
+    //@State var myTest = test
     
     @State var urlRadioStationHome : String = myUrlRadioStationHome
     
