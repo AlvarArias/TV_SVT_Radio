@@ -20,10 +20,10 @@ struct buttonFeedback: View {
     }
 }
 
-/*
+
 #Preview {
-    buttonFeedback()
+    buttonFeedback(buttonName: "Feedback")
 }
-*/
+
 
 
