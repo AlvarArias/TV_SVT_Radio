@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		621124E72BEE3D0C00E0FC9E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 621124E62BEE3D0C00E0FC9E /* Lottie */; };
 		621124E92BEE44C300E0FC9E /* play.json in Resources */ = {isa = PBXBuildFile; fileRef = 621124E82BEE44C300E0FC9E /* play.json */; };
 		626FA91B2BEFBBEA001D84C4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626FA91A2BEFBBEA001D84C4 /* Colors.swift */; };
 		626FA91D2BEFBE7E001D84C4 /* InitialValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626FA91C2BEFBE7E001D84C4 /* InitialValues.swift */; };
@@ -17,6 +16,8 @@
 		627185C02BE6AA3300345F3D /* PlayRadioTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627185BF2BE6AA3300345F3D /* PlayRadioTest.swift */; };
 		627185C12BE6ABE700345F3D /* PlayRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627185BB2BE6A06B00345F3D /* PlayRadio.swift */; };
 		627492C02BEDE9D200696A97 /* music-equalizer.json in Resources */ = {isa = PBXBuildFile; fileRef = 627492BF2BEDE9D200696A97 /* music-equalizer.json */; };
+		62784CFC2E6A060400B684FC /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 62784CFB2E6A060400B684FC /* CachedAsyncImage */; };
+		62784CFE2E6A062600B684FC /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 62784CFD2E6A062600B684FC /* CachedAsyncImage */; };
 		62815A852E6594F000154571 /* Nueva estructura de archivos.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 62815A842E6594F000154571 /* Nueva estructura de archivos.rtf */; };
 		62815A872E65954000154571 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62815A862E65954000154571 /* Channel.swift */; };
 		62815A892E65959D00154571 /* RadioStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62815A882E65959D00154571 /* RadioStation.swift */; };
@@ -36,7 +37,8 @@
 		6283FFD72BE4EE8A00DA6626 /* radios23.json in Resources */ = {isa = PBXBuildFile; fileRef = 6283FFD62BE4EE8A00DA6626 /* radios23.json */; };
 		6283FFD92BE4EEA200DA6626 /* radioStationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFD82BE4EEA200DA6626 /* radioStationInfo.swift */; };
 		6283FFDB2BE4EF0300DA6626 /* LoadRadioStationJSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFDA2BE4EF0300DA6626 /* LoadRadioStationJSONFile.swift */; };
-		6283FFDE2BE4F05800DA6626 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6283FFDD2BE4F05800DA6626 /* CachedAsyncImage */; };
+		629FBCBF2E6A071300D26A56 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 629FBCBE2E6A071300D26A56 /* CachedAsyncImage */; };
+		629FBCC12E6A073900D26A56 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 629FBCC02E6A073900D26A56 /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,18 +79,18 @@
 		62815A9E2E659A6200154571 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 		628311C22BEF2E45007BD9E2 /* play1.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = play1.lottie; sourceTree = "<group>"; };
 		628311C42BEF2E61007BD9E2 /* play2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = play2.gif; sourceTree = "<group>"; };
-		6283FFA82BE4EDF500DA6626 /* TV_SVT_Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TV_SVT_Radio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6283FFAB2BE4EDF500DA6626 /* TV_SVT_RadioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_SVT_RadioApp.swift; sourceTree = "<group>"; };
 		6283FFAD2BE4EDF500DA6626 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		6283FFAF2BE4EDF800DA6626 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6283FFB82BE4EDF800DA6626 /* TV_SVT_RadioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TV_SVT_RadioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6283FFBC2BE4EDF800DA6626 /* TV_SVT_RadioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_SVT_RadioTests.swift; sourceTree = "<group>"; };
-		6283FFC22BE4EDF800DA6626 /* TV_SVT_RadioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TV_SVT_RadioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6283FFC62BE4EDF800DA6626 /* TV_SVT_RadioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_SVT_RadioUITests.swift; sourceTree = "<group>"; };
 		6283FFC82BE4EDF800DA6626 /* TV_SVT_RadioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_SVT_RadioUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6283FFD62BE4EE8A00DA6626 /* radios23.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = radios23.json; sourceTree = "<group>"; };
 		6283FFD82BE4EEA200DA6626 /* radioStationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = radioStationInfo.swift; sourceTree = "<group>"; };
 		6283FFDA2BE4EF0300DA6626 /* LoadRadioStationJSONFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadRadioStationJSONFile.swift; sourceTree = "<group>"; };
+		629FBCBB2E6A06AA00D26A56 /* TV_SVT_Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TV_SVT_Radio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		629FBCBC2E6A06AA00D26A56 /* TV_SVT_RadioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TV_SVT_RadioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		629FBCBD2E6A06AA00D26A56 /* TV_SVT_RadioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TV_SVT_RadioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6283FFDE2BE4F05800DA6626 /* CachedAsyncImage in Frameworks */,
-				621124E72BEE3D0C00E0FC9E /* Lottie in Frameworks */,
+				629FBCBF2E6A071300D26A56 /* CachedAsyncImage in Frameworks */,
+				629FBCC12E6A073900D26A56 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62784CFC2E6A060400B684FC /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62784CFE2E6A062600B684FC /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,19 +214,11 @@
 				6283FFAA2BE4EDF500DA6626 /* TV_SVT_Radio */,
 				6283FFBB2BE4EDF800DA6626 /* TV_SVT_RadioTests */,
 				6283FFC52BE4EDF800DA6626 /* TV_SVT_RadioUITests */,
-				6283FFA92BE4EDF500DA6626 /* Products */,
 				621124E52BEE3D0200E0FC9E /* Frameworks */,
+				629FBCBB2E6A06AA00D26A56 /* TV_SVT_Radio.app */,
+				629FBCBC2E6A06AA00D26A56 /* TV_SVT_RadioTests.xctest */,
+				629FBCBD2E6A06AA00D26A56 /* TV_SVT_RadioUITests.xctest */,
 			);
-			sourceTree = "<group>";
-		};
-		6283FFA92BE4EDF500DA6626 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6283FFA82BE4EDF500DA6626 /* TV_SVT_Radio.app */,
-				6283FFB82BE4EDF800DA6626 /* TV_SVT_RadioTests.xctest */,
-				6283FFC22BE4EDF800DA6626 /* TV_SVT_RadioUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6283FFAA2BE4EDF500DA6626 /* TV_SVT_Radio */ = {
@@ -285,11 +281,11 @@
 			);
 			name = TV_SVT_Radio;
 			packageProductDependencies = (
-				6283FFDD2BE4F05800DA6626 /* CachedAsyncImage */,
-				621124E62BEE3D0C00E0FC9E /* Lottie */,
+				629FBCBE2E6A071300D26A56 /* CachedAsyncImage */,
+				629FBCC02E6A073900D26A56 /* Lottie */,
 			);
 			productName = TV_SVT_Radio;
-			productReference = 6283FFA82BE4EDF500DA6626 /* TV_SVT_Radio.app */;
+			productReference = 629FBCBB2E6A06AA00D26A56 /* TV_SVT_Radio.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6283FFB72BE4EDF800DA6626 /* TV_SVT_RadioTests */ = {
@@ -306,8 +302,11 @@
 				6283FFBA2BE4EDF800DA6626 /* PBXTargetDependency */,
 			);
 			name = TV_SVT_RadioTests;
+			packageProductDependencies = (
+				62784CFB2E6A060400B684FC /* CachedAsyncImage */,
+			);
 			productName = TV_SVT_RadioTests;
-			productReference = 6283FFB82BE4EDF800DA6626 /* TV_SVT_RadioTests.xctest */;
+			productReference = 629FBCBC2E6A06AA00D26A56 /* TV_SVT_RadioTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		6283FFC12BE4EDF800DA6626 /* TV_SVT_RadioUITests */ = {
@@ -324,8 +323,11 @@
 				6283FFC42BE4EDF800DA6626 /* PBXTargetDependency */,
 			);
 			name = TV_SVT_RadioUITests;
+			packageProductDependencies = (
+				62784CFD2E6A062600B684FC /* CachedAsyncImage */,
+			);
 			productName = TV_SVT_RadioUITests;
-			productReference = 6283FFC22BE4EDF800DA6626 /* TV_SVT_RadioUITests.xctest */;
+			productReference = 629FBCBD2E6A06AA00D26A56 /* TV_SVT_RadioUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -364,7 +366,7 @@
 				6283FFDC2BE4F05800DA6626 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 				621124E42BEE3B1800E0FC9E /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
-			productRefGroup = 6283FFA92BE4EDF500DA6626 /* Products */;
+			productRefGroup = 6283FF9F2BE4EDF500DA6626;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -774,15 +776,25 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		621124E62BEE3D0C00E0FC9E /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 621124E42BEE3B1800E0FC9E /* XCRemoteSwiftPackageReference "lottie-spm" */;
-			productName = Lottie;
-		};
-		6283FFDD2BE4F05800DA6626 /* CachedAsyncImage */ = {
+		62784CFB2E6A060400B684FC /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6283FFDC2BE4F05800DA6626 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
+		};
+		62784CFD2E6A062600B684FC /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6283FFDC2BE4F05800DA6626 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+		629FBCBE2E6A071300D26A56 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6283FFDC2BE4F05800DA6626 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+		629FBCC02E6A073900D26A56 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 621124E42BEE3B1800E0FC9E /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
