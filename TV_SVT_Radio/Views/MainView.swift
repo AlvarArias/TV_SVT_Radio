@@ -39,17 +39,13 @@ struct MainView: View {
                     HStack {
                         VStack {
                             RadioStationImage(url: URL(string: urlImageRadioSelected), accessibilityLabel: nameRadio)
-                    
                             
-                            if isPlaying {
-                                //LottieView(animation: .named("play"))
-                                Image(systemName: "waveform.circle.fill")
+                            Image(systemName: isPlaying ? "waveform.circle.fill" : "pause.circle.fill")
+                                .resizable()
                                 .frame(width: 100, height: 100)
-                            } else {
-                                //LottieView(animation: .named("play"))
-                                Image(systemName: "pause.circle.fill")
-                                    .frame(width: 100, height: 100)
-                            }
+                                .animation(.easeInOut(duration: 0.5), value: isPlaying)
+                                .transition(.scale)
+
                         }
                         VStack {
                             DetailView(text: nameRadio, textDescription: descriptionRadio, urlRadioStationHome: urlRadioStationHome, buttonIsPlaying: isPlaying)
