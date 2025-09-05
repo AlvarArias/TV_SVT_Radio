@@ -8,7 +8,7 @@
 // Model for a Radio Station
 import Foundation
 
-struct RadioStation {
+struct RadioStation: Hashable, Codable {
     // Define properties for a Radio Station
     let image: String
     let imagetemplate: String

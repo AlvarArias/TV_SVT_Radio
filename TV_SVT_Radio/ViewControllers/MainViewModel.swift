@@ -14,32 +14,23 @@ class MainViewModel: ObservableObject {
     // Ejemplo de función para cargar canales
     
     func fetchChannels() {
-        // Aquí iría la lógica para cargar los canales, por ejemplo, desde un archivo JSON o una API
-        
-        
+        guard let url = Bundle.main.url(forResource: "radios23", withExtension: "json") else {
+            print("No se encontró el archivo radios23.json")
+            self.listRadioStaions = []
+            return
+        }
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            let stations = try decoder.decode([RadioStation].self, from: data)
+            DispatchQueue.main.async {
+                self.listRadioStaions = stations
+            }
+        } catch {
+            print("Error cargando radios23.json: \(error)")
+            self.listRadioStaions = []
+        }
     }
     
-    /*
-     func loadStation(fileName: String = "radios23") -> listRadioStaions {
-     
-     guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
-     return []
-     }
-     
-     do {
-     let data = try Data(contentsOf: url)
-     let decoder = JSONDecoder()
-     radioStations = try decoder.decode([radioStationInfo].self, from: data)
-     
-     return radioStations
-     
-     } catch {
-     print("Error loading radio stations: \(error)")
-     return []
-     }
-     }
-     
-     }
-     }
-     */
+}
     
