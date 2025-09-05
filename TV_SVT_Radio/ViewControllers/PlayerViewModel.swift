@@ -7,31 +7,50 @@
 
 import Foundation
 import Combine
+import AVFoundation
+
 
 class PlayerViewModel: ObservableObject {
-    // Ejemplo de título actual a mostrar en la vista
     @Published var currentTitle: String? = "Nombre de la emisora o canción"
-    
-    // Ejemplo de progreso de reproducción (0.0 a 1.0)
     @Published var progress: Double? = 0.3
-    
-    // Puedes agregar aquí otros estados relevantes, como si está reproduciendo, pausado, etc.
     @Published var isPlaying: Bool = false
 
-    // Simulación de acciones del reproductor
-    func play() {
-        isPlaying = true
-        // Lógica para reproducir audio
+    private var player: AVPlayer?
+
+    // Reproduce una estación de radio desde la URL
+    func play(radioURL: String) {
+        do {
+            let audioSession = AVAudioSession.sharedInstance()
+            try audioSession.setCategory(.playback)
+            try audioSession.setActive(true)
+
+            guard let url = URL(string: radioURL) else {
+                print("URL inválida")
+                return
+            }
+
+            player = AVPlayer(url: url)
+            player?.play()
+            isPlaying = true
+        } catch {
+            print("Failed to play audio: \(error.localizedDescription)")
+            isPlaying = false
+        }
     }
-    
+
+    // Pausa la reproducción
     func pause() {
+        player?.pause()
         isPlaying = false
-        // Lógica para pausar audio
     }
-    
+
+    // Detiene la reproducción y reinicia el progreso
     func stop() {
+        player?.pause()
+        player = nil
         isPlaying = false
         progress = 0.0
-        // Lógica para detener audio
     }
 }
+
+
