@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CachedAsyncImage
-import Lottie
+//import Lottie
 
 
 
@@ -37,11 +37,12 @@ struct MainView: View {
                         VStack {
                             RadioStationImage(url: URL(string: urlImageRadioSelected), accessibilityLabel: nameRadio)
                             if isPlaying {
-                                LottieView(animation: .named("play"))
-                                    .playing(loopMode: .loop)
-                                    .frame(width: 100, height: 100)
+                                //LottieView(animation: .named("play"))
+                                Image(systemName: "waveform.circle.fill")
+                                .frame(width: 100, height: 100)
                             } else {
-                                LottieView(animation: .named("play"))
+                                //LottieView(animation: .named("play"))
+                                Image(systemName: "pause.circle.fill")
                                     .frame(width: 100, height: 100)
                             }
                         }

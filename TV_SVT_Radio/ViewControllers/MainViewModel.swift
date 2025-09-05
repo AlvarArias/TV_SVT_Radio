@@ -11,29 +11,35 @@ import Combine
 class MainViewModel: ObservableObject {
     // Ejemplo de propiedad publicada
     @Published var listRadioStaions: [RadioStation] = []
-    
     // Ejemplo de función para cargar canales
+    
     func fetchChannels() {
-        // Lógica de carga aquí
+        // Aquí iría la lógica para cargar los canales, por ejemplo, desde un archivo JSON o una API
         
-        func loadStation(fileName: String = "radios23") -> listRadioStaions {
-            
-            guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
-                return []
-            }
-
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                radioStations = try decoder.decode([radioStationInfo].self, from: data)
-        
-                return radioStations
-                    
-            } catch {
-                print("Error loading radio stations: \(error)")
-                return []
-            }
-        }
         
     }
-}
+    
+    /*
+     func loadStation(fileName: String = "radios23") -> listRadioStaions {
+     
+     guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
+     return []
+     }
+     
+     do {
+     let data = try Data(contentsOf: url)
+     let decoder = JSONDecoder()
+     radioStations = try decoder.decode([radioStationInfo].self, from: data)
+     
+     return radioStations
+     
+     } catch {
+     print("Error loading radio stations: \(error)")
+     return []
+     }
+     }
+     
+     }
+     }
+     */
+    
