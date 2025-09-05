@@ -10,11 +10,16 @@ import Foundation
 
 struct RadioStation {
     // Define properties for a Radio Station
-    let id: Int
+    let image: String
+    let imagetemplate: String
+    let color: String
+    let tagline: String
+    let siteurl: String
+    let url: String
+    let scheduleurl: String
+    let xmltvid: String
     let name: String
-    let streamURL: String
-    let imageURL: String
-    let description: String
+    let id: String
 }
    
 
