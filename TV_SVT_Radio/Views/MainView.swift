@@ -36,22 +36,26 @@ struct MainView: View {
                 .ignoresSafeArea()
             VStack {
                 if !radioStations.isEmpty {
-                    HStack {
+                    HStack(alignment: .top, spacing: 20) {
                         VStack {
                             RadioStationImage(url: URL(string: urlImageRadioSelected), accessibilityLabel: nameRadio)
                             
-                            Image(systemName: isPlaying ? "waveform.circle.fill" : "pause.circle.fill")
-                                .resizable()
-                                .frame(width: 100, height: 100)
-                                .animation(.easeInOut(duration: 0.5), value: isPlaying)
-                                .transition(.scale)
-
+                          
                         }
                         VStack {
                             DetailView(text: nameRadio, textDescription: descriptionRadio, urlRadioStationHome: urlRadioStationHome, buttonIsPlaying: isPlaying)
                                 .padding(.bottom, 70)
                         }
+                        
+                        Image(systemName: isPlaying ? "waveform.circle.fill" : "pause.circle.fill")
+                            .resizable()
+                            .frame(width: 90, height: 90)
+                            .animation(.easeInOut(duration: 1.5), value: isPlaying)
+                            .transition(.opacity)
+
+                        
                     }
+                    
                     ScrollView(.vertical) {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
@@ -87,6 +91,7 @@ struct MainView: View {
                             .padding(.bottom, 20)
                         }
                     }
+                    
                 }
             }
             .onAppear {
@@ -150,9 +155,10 @@ struct RadioStationImage: View {
 
     var body: some View {
         CachedAsyncImage(url: url, content: { image in
-            image.resizable()
-                .aspectRatio(contentMode: .fill)
+            image
+                .resizable()
                 .frame(width: 200, height: 200)
+                .aspectRatio(contentMode: .fill)
                 .cornerRadius(10)
                 .focusable(true)
                 .shadow(radius: 10)
@@ -176,13 +182,14 @@ struct DetailView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(text ?? "")
-                .font(.largeTitle)
+                .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
                 .padding(.leading, 10)
                 .padding(.top, 10)
+            
             Text(textDescription ?? "")
-                .font(.headline)
+                .font(.caption)
                 .foregroundColor(.white)
                 .padding(.leading, 10)
                 .padding(.bottom, 10)
