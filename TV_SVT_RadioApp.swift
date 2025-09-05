@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct TV_SVT_RadioApp: App {
+    
     var body: some Scene {
         WindowGroup {
             MainView()

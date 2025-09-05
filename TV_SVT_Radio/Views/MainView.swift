@@ -23,8 +23,11 @@ struct MainView: View {
     @State private var nameRadio: String = myNameRadio
     @State private var descriptionRadio: String = myDescriptionRadio
     @State private var isFocused = false
-
+    
     let items = 0...51
+    
+    private var vm = MainViewModel()
+    
 
     // MARK: - Body
     var body: some View {
@@ -36,6 +39,8 @@ struct MainView: View {
                     HStack {
                         VStack {
                             RadioStationImage(url: URL(string: urlImageRadioSelected), accessibilityLabel: nameRadio)
+                    
+                            
                             if isPlaying {
                                 //LottieView(animation: .named("play"))
                                 Image(systemName: "waveform.circle.fill")
@@ -91,6 +96,10 @@ struct MainView: View {
             .onAppear {
                 if radioStations.isEmpty {
                     radioStations = radioStationLoader.loadStation()
+                }
+                
+                if vm.listRadioStaions.isEmpty {
+                    vm.fetchChannels()
                 }
             }
         }
@@ -155,6 +164,7 @@ struct RadioStationImage: View {
         }, placeholder: {
             ProgressView()
         })
+        
     }
 }
     
