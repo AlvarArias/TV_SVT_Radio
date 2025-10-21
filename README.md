@@ -1,42 +1,35 @@
 # TV_SVT_Radio
 
-TV_SVT_Radio es una aplicación desarrollada en Swift para iOS que permite acceder y escuchar canales de radio y TV, especialmente de la red SVT.
+![CI](https://github.com/AlvarArias/TV_SVT_Radio/actions/workflows/ci.yml/badge.svg)
+![Codecov](https://codecov.io/gh/AlvarArias/TV_SVT_Radio/branch/main/graph/badge.svg)
 
-## Características principales
+TV_SVT_Radio es una aplicación iOS escrita en Swift para reproducir streams de radio de SVT. Este repositorio contiene la app, tests y flujo de CI sugerido para ejecutar los tests con GitHub Actions.
 
-- Listado de canales de TV y estaciones de radio.
-- Reproducción en streaming.
-- Interfaz sencilla y amigable.
-- Soporte para pruebas unitarias y de interfaz.
+Características rápidas:
 
-## Instalación
+- Reproducción de stream de radio (AVFoundation)
+- Visualización de metadata (título, programa, carátula)
+- Reproducción en segundo plano y controles de reproducción
 
-1. Clona este repositorio:
-    ```bash
-    git clone https://github.com/AlvarArias/TV_SVT_Radio.git
-    ```
-2. Abre el proyecto en Xcode.
-3. Instala las dependencias si las hay (CocoaPods, Swift Package Manager, etc.).
-4. Ejecuta en un simulador o dispositivo físico.
+Cómo ejecutar
 
-## Uso
+1. Abrir el proyecto en Xcode (TV_SVT_Radio.xcodeproj o .xcworkspace).
+2. Seleccionar el scheme adecuado y un simulador.
+3. Ejecutar Product → Test (Cmd+U) para correr los tests.
 
-Abre la app, selecciona un canal o estación y comienza a disfrutar del contenido en vivo.
+Desde la línea de comandos (ejemplo):
 
-## Estructura del proyecto
+xcodebuild -workspace "TV_SVT_Radio.xcworkspace" -scheme "TV_SVT_Radio" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14' test
 
-- `TV_SVT_Radio/` - Código fuente principal de la app.
-- `TV_SVT_RadioTests/` - Pruebas unitarias.
-- `TV_SVT_RadioUITests/` - Pruebas de interfaz.
+Añadir CI
 
-## Contribuciones
+Se incluye un workflow sugerido (.github/workflows/ci.yml en la rama testing) que ejecuta los tests en runners macOS y detecta CocoaPods/SwiftPM.
 
-¡Las contribuciones son bienvenidas! Por favor, abre un issue o pull request para sugerir mejoras o arreglar errores.
+Contribuir
 
-## Licencia
+- Abre issues para bugs o mejoras.
+- Usa la rama testing para cambios relacionados con tests y CI.
 
-Este proyecto está bajo la licencia [MIT](LICENSE).
+Licencia
 
----
-
-Desarrollado por [AlvarArias](https://github.com/AlvarArias)
+Añade aquí la licencia que prefieras (p.ej. MIT).
