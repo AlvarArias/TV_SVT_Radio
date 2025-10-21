@@ -1,0 +1,54 @@
+name: CI - Run Unit Tests
+
+on:
+  push:
+    branches: [ main, testing ]
+  pull_request:
+    branches: [ main, testing ]
+
+jobs:
+  test:
+    name: Run tests on macOS
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby (for CocoaPods)
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.x'
+
+      - name: Install CocoaPods and xcpretty (if needed)
+        run: |
+          gem install xcpretty --no-document
+          if [ -f Podfile ]; then
+            gem install cocoapods --no-document
+            pod install
+          fi
+
+      - name: Resolve Swift Package Manager dependencies (if any)
+        run: |
+          if [ -f Package.swift ]; then
+            swift package resolve
+          fi
+
+      - name: Run unit tests
+        env:
+          LANG: en_US.UTF-8
+        run: |
+          set -o pipefail
+          xcodebuild -version
+          DEST="platform=iOS Simulator,name=iPhone 14"
+          if [ -f "./TV_SVT_Radio.xcworkspace" ]; then
+            xcodebuild test -workspace "TV_SVT_Radio.xcworkspace" -scheme "TV_SVT_Radio" -sdk iphonesimulator -destination "$DEST" ONLY_ACTIVE_ARCH=NO | xcpretty
+          elif [ -f "./TV_SVT_Radio.xcodeproj" ]; then
+            xcodebuild test -project "TV_SVT_Radio.xcodeproj" -scheme "TV_SVT_Radio" -sdk iphonesimulator -destination "$DEST" ONLY_ACTIVE_ARCH=NO | xcpretty
+          else
+            echo "No .xcworkspace or .xcodeproj found. If your tests are in a Swift Package, use 'swift test' instead."
+            if [ -f Package.swift ]; then
+              swift test --parallel
+            else
+              exit 1
+            fi
+          fi
