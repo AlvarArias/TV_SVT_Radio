@@ -8,12 +8,13 @@
 import Foundation
 import Combine
 
-class MainViewModel: ObservableObject {
+@MainActor
+final class MainViewModel: ObservableObject {
     // Ejemplo de propiedad publicada
     @Published var listRadioStaions: [RadioStation] = []
     // Ejemplo de función para cargar canales
     
-    func fetchChannels() {
+    func fetchChannels() async {
         guard let url = Bundle.main.url(forResource: "radios23", withExtension: "json") else {
             print("No se encontró el archivo radios23.json")
             self.listRadioStaions = []
@@ -23,9 +24,7 @@ class MainViewModel: ObservableObject {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
             let stations = try decoder.decode([RadioStation].self, from: data)
-            DispatchQueue.main.async {
-                self.listRadioStaions = stations
-            }
+            self.listRadioStaions = stations
         } catch {
             print("Error cargando radios23.json: \(error)")
             self.listRadioStaions = []

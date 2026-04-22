@@ -9,8 +9,8 @@ import Foundation
 import Combine
 import AVFoundation
 
-
-class PlayerViewModel: ObservableObject {
+@MainActor
+final class PlayerViewModel: ObservableObject {
     @Published var currentTitle: String? = "Nombre de la emisora o canción"
     @Published var progress: Double? = 0.3
     @Published var isPlaying: Bool = false

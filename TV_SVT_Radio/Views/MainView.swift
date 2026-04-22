@@ -84,8 +84,8 @@ struct MainView: View {
                            
                             
                             HStack {
-                                buttonFeedback(buttonName: "Om appen")
-                                buttonFeedback(buttonName: "Feedback")
+                                ButtonFeedback(buttonName: "Om appen")
+                                ButtonFeedback(buttonName: "Feedback")
                             }
                             .padding(.bottom, 20)
                         }
@@ -93,13 +93,13 @@ struct MainView: View {
                     
                 }
             }
-            .onAppear {
+            .task {
                 if radioStations.isEmpty {
                     radioStations = radioStationLoader.loadStation()
                 }
                 
                 if vm.listRadioStaions.isEmpty {
-                    vm.fetchChannels()
+                    await vm.fetchChannels()
                 }
             }
         }

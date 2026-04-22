@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct buttonFeedback: View {
+struct ButtonFeedback: View {
     
-    var buttonName : String
+    var buttonName: String
     
     var body: some View {
         Button(action: {
@@ -22,7 +22,7 @@ struct buttonFeedback: View {
 
 
 #Preview {
-    buttonFeedback(buttonName: "Feedback")
+    ButtonFeedback(buttonName: "Feedback")
 }
 
 

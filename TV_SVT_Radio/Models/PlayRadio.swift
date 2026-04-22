@@ -9,12 +9,16 @@ import Foundation
 import SwiftUI
 import AVKit
 
-class PlayRadio {
+@MainActor
+final class PlayRadio {
     
     var player = AVPlayer()
     
     func playSongRadio(radioURL: String, isPlaying: Bool) -> Bool {
-        
+        guard let url = URL(string: radioURL) else {
+            print("Invalid radio URL: \(radioURL)")
+            return false
+        }
 
         do {
             
@@ -22,7 +26,7 @@ class PlayRadio {
             try audioSession.setCategory(.playback)
             try audioSession.setActive(true)
             
-            player = AVPlayer(url: URL(string: radioURL)!)
+            player = AVPlayer(url: url)
         
             
             if isPlaying {
