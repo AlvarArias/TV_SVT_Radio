@@ -168,7 +168,6 @@ TV_SVT_Radio/
 │   ├── MainView.swift              ← Main station list & player UI
 │   └── buttonFeedback.swift        ← Custom button component
 ├── Models/
-│   ├── radioStationInfo.swift      ← RadioStation data model
 │   ├── PlayRadio.swift             ← Playback logic
 │   ├── LoadRadioStationJSONFile.swift ← JSON parsing for radios23.json
 │   └── radios23.json               ← Station data source
@@ -178,7 +177,7 @@ TV_SVT_Radio/
 ├── ViewControllers/ (rename to ViewModels?)
 │   ├── MainViewModel.swift         ← List state management
 │   ├── PlayerViewModel.swift       ← Playback state (@MainActor needed)
-│   └── RadioStation.swift          ← (Duplicate of radioStationInfo? Review)
+│   └── RadioStation.swift          ← Single source of truth for station model
 └── Utils/
     ├── Extensions.swift            ← SwiftUI/Foundation extensions
     └── Helpers.swift               ← Utility functions
@@ -205,10 +204,10 @@ TV_SVT_Radio/
 Now that the project has been migrated to Swift 6 and tvOS 26, consider these improvements:
 
 ### Immediate (Quality Improvements)
-1. Enable `SWIFT_STRICT_CONCURRENCY = complete` in Build Settings for complete type safety
-2. Consolidate duplicate models: `RadioStation.swift` vs `radioStationInfo.swift`
+1. ✅ `SWIFT_STRICT_CONCURRENCY = complete` — enabled in both Debug and Release
+2. ✅ Duplicate models consolidated — `radioStationInfo.swift` deleted; `RadioStation` is the single source of truth
 3. Rename folder `ViewControllers/` to `ViewModels/` for clarity
-4. Add comprehensive error handling with `Result` types
+4. ✅ Error handling with `Result` types — `APIClient` returns `Result<T, APIError>`; `MainViewModel` uses it via `switch result`
 
 ### Medium-term (Architecture)
 1. Implement proper API error handling in `APIClient.swift`
