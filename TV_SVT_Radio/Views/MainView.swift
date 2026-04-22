@@ -37,34 +37,33 @@ struct MainView: View {
             VStack {
                 if !radioStations.isEmpty {
                     HStack(alignment: .top, spacing: 20) {
-                        VStack {
+        
                             RadioStationImage(url: URL(string: urlImageRadioSelected), accessibilityLabel: nameRadio)
-                            
-                          
-                        }
-                        VStack {
+                                       
                             DetailView(text: nameRadio, textDescription: descriptionRadio, urlRadioStationHome: urlRadioStationHome, buttonIsPlaying: isPlaying)
-                                .padding(.bottom, 70)
-                        }
+                                //.padding(.bottom, 70)
                         
-                        Image(systemName: isPlaying ? "waveform.circle.fill" : "pause.circle.fill")
-                            .resizable()
-                            .frame(width: 90, height: 90)
-                            .animation(.easeInOut(duration: 1.5), value: isPlaying)
-                            .transition(.opacity)
+                            Image(systemName: isPlaying ? "waveform.circle.fill" : "pause.circle.fill")
+                                .resizable()
+                                .frame(width: 90, height: 90)
+                                .animation(.easeInOut(duration: 1.5), value: isPlaying)
+                                .transition(.opacity)
 
                         
                     }
                     
+                    
+                    HStack {
+                        Text("Välj en station")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding(.leading, 50)
+                        Spacer()
+                    }
+                    
                     ScrollView(.vertical) {
                         ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                Text("Välj en station")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .padding(.leading, 50)
-                                Spacer()
-                            }
+                           
                             // Carruseles de estaciones
                             ForEach(0..<5) { index in
                                 let start = index * 6
