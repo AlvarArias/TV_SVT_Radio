@@ -29,8 +29,6 @@
 		6283FFAE2BE4EDF500DA6626 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFAD2BE4EDF500DA6626 /* MainView.swift */; };
 		6283FFB02BE4EDF800DA6626 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6283FFAF2BE4EDF800DA6626 /* Assets.xcassets */; };
 		6283FFBD2BE4EDF800DA6626 /* TV_SVT_RadioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFBC2BE4EDF800DA6626 /* TV_SVT_RadioTests.swift */; };
-		AA0000012BE6000000000001 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000012BE6000000000002 /* APIClientTests.swift */; };
-		AA0000012BE6000000000003 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000012BE6000000000004 /* MainViewModelTests.swift */; };
 		6283FFC72BE4EDF800DA6626 /* TV_SVT_RadioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFC62BE4EDF800DA6626 /* TV_SVT_RadioUITests.swift */; };
 		6283FFC92BE4EDF800DA6626 /* TV_SVT_RadioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFC82BE4EDF800DA6626 /* TV_SVT_RadioUITestsLaunchTests.swift */; };
 		6283FFD72BE4EE8A00DA6626 /* radios23.json in Resources */ = {isa = PBXBuildFile; fileRef = 6283FFD62BE4EE8A00DA6626 /* radios23.json */; };
@@ -41,6 +39,8 @@
 		629FBCC92E6A19A600D26A56 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 629FBCC82E6A19A600D26A56 /* Lottie */; };
 		629FBCCB2E6A19F600D26A56 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 629FBCCA2E6A19F600D26A56 /* Lottie */; };
 		629FBCCD2E6A1A1400D26A56 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 629FBCCC2E6A1A1400D26A56 /* CachedAsyncImage */; };
+		AA0000012BE6000000000001 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000012BE6000000000002 /* APIClientTests.swift */; };
+		AA0000012BE6000000000003 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000012BE6000000000004 /* MainViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,8 +84,6 @@
 		6283FFAD2BE4EDF500DA6626 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		6283FFAF2BE4EDF800DA6626 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6283FFBC2BE4EDF800DA6626 /* TV_SVT_RadioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_SVT_RadioTests.swift; sourceTree = "<group>"; };
-		AA0000012BE6000000000002 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
-		AA0000012BE6000000000004 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		6283FFC62BE4EDF800DA6626 /* TV_SVT_RadioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_SVT_RadioUITests.swift; sourceTree = "<group>"; };
 		6283FFC82BE4EDF800DA6626 /* TV_SVT_RadioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_SVT_RadioUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6283FFD62BE4EE8A00DA6626 /* radios23.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = radios23.json; sourceTree = "<group>"; };
@@ -93,6 +91,8 @@
 		629FBCBB2E6A06AA00D26A56 /* TV_SVT_Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TV_SVT_Radio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629FBCBC2E6A06AA00D26A56 /* TV_SVT_RadioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TV_SVT_RadioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		629FBCBD2E6A06AA00D26A56 /* TV_SVT_RadioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TV_SVT_RadioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000012BE6000000000002 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		AA0000012BE6000000000004 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
