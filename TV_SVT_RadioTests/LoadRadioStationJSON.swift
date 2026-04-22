@@ -2,35 +2,80 @@
 //  LoadRadioStationJSON.swift
 //  TV_SVT_RadioTests
 //
-//  Created by Alvar Arias on 2024-05-04.
-//
 
 import XCTest
 @testable import TV_SVT_Radio
 
-class LoadRadioStationJSONFileTests: XCTestCase {
-    
-    var loadRadioStationJSONFile: LoadRadioStationJSONFile!
-    
+final class LoadRadioStationJSONFileTests: XCTestCase {
+
+    var loader: LoadRadioStationJSONFile!
+
     override func setUp() {
         super.setUp()
-        loadRadioStationJSONFile = LoadRadioStationJSONFile()
+        loader = LoadRadioStationJSONFile()
     }
-    
+
     override func tearDown() {
-        loadRadioStationJSONFile = nil
+        loader = nil
         super.tearDown()
     }
-    
+
+    // MARK: - File not found
+
     func testLoadStationReturnsEmptyWhenFileNotFound() {
-        // Pass an incorrect file name to simulate file not found
-        let result = loadRadioStationJSONFile.loadStation(fileName: "incorrectFileName")
-        XCTAssertTrue(result.isEmpty, "loadStation should return an empty array when the file is not found")
+        let result = loader.loadStation(fileName: "nonexistent_file")
+        XCTAssertTrue(result.isEmpty)
     }
-    
-    func testLoadStationReturnsDecodedDataWhenFileFound() {
-        // Assuming that the file "radios23.json" exists and contains valid data
-        let result = loadRadioStationJSONFile.loadStation()
-        XCTAssertFalse(result.isEmpty, "loadStation should return decoded data when the file is found and contains valid data")
+
+    // MARK: - Loading real data
+
+    func testLoadStationReturnsNonEmptyArray() {
+        let result = loader.loadStation()
+        XCTAssertFalse(result.isEmpty, "radios23.json should contain at least one station")
+    }
+
+    func testLoadStationReturns52Stations() {
+        let result = loader.loadStation()
+        XCTAssertEqual(result.count, 52)
+    }
+
+    func testLoadStationFirstStationIsP1() {
+        let result = loader.loadStation()
+        XCTAssertEqual(result.first?.name, "P1")
+        XCTAssertEqual(result.first?.id, "132")
+    }
+
+    func testLoadStationAllStationsHaveNonEmptyURL() {
+        let result = loader.loadStation()
+        let emptyURLs = result.filter { $0.url.isEmpty }
+        XCTAssertTrue(emptyURLs.isEmpty, "All stations should have a non-empty stream URL")
+    }
+
+    func testLoadStationAllStationsHaveNonEmptyName() {
+        let result = loader.loadStation()
+        let unnamed = result.filter { $0.name.isEmpty }
+        XCTAssertTrue(unnamed.isEmpty, "All stations should have a non-empty name")
+    }
+
+    func testLoadStationAllStationsHaveNonEmptyID() {
+        let result = loader.loadStation()
+        let noID = result.filter { $0.id.isEmpty }
+        XCTAssertTrue(noID.isEmpty, "All stations should have a non-empty ID")
+    }
+
+    // MARK: - Stateful caching
+
+    func testLoadStationUpdatesRadioStationsProperty() {
+        let result = loader.loadStation()
+        XCTAssertEqual(loader.radioStations.count, result.count)
+    }
+
+    func testLoadStationDoesNotUpdateStateWhenFileNotFound() {
+        // Load valid data first, then attempt a bad file name
+        _ = loader.loadStation()
+        let countBefore = loader.radioStations.count
+        _ = loader.loadStation(fileName: "nonexistent_file")
+        // radioStations should remain unchanged because the guard returns early
+        XCTAssertEqual(loader.radioStations.count, countBefore)
     }
 }

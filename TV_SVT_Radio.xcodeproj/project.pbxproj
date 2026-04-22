@@ -29,6 +29,8 @@
 		6283FFAE2BE4EDF500DA6626 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFAD2BE4EDF500DA6626 /* MainView.swift */; };
 		6283FFB02BE4EDF800DA6626 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6283FFAF2BE4EDF800DA6626 /* Assets.xcassets */; };
 		6283FFBD2BE4EDF800DA6626 /* TV_SVT_RadioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFBC2BE4EDF800DA6626 /* TV_SVT_RadioTests.swift */; };
+		AA0000012BE6000000000001 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000012BE6000000000002 /* APIClientTests.swift */; };
+		AA0000012BE6000000000003 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000012BE6000000000004 /* MainViewModelTests.swift */; };
 		6283FFC72BE4EDF800DA6626 /* TV_SVT_RadioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFC62BE4EDF800DA6626 /* TV_SVT_RadioUITests.swift */; };
 		6283FFC92BE4EDF800DA6626 /* TV_SVT_RadioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283FFC82BE4EDF800DA6626 /* TV_SVT_RadioUITestsLaunchTests.swift */; };
 		6283FFD72BE4EE8A00DA6626 /* radios23.json in Resources */ = {isa = PBXBuildFile; fileRef = 6283FFD62BE4EE8A00DA6626 /* radios23.json */; };
@@ -82,6 +84,8 @@
 		6283FFAD2BE4EDF500DA6626 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		6283FFAF2BE4EDF800DA6626 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6283FFBC2BE4EDF800DA6626 /* TV_SVT_RadioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_SVT_RadioTests.swift; sourceTree = "<group>"; };
+		AA0000012BE6000000000002 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		AA0000012BE6000000000004 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		6283FFC62BE4EDF800DA6626 /* TV_SVT_RadioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_SVT_RadioUITests.swift; sourceTree = "<group>"; };
 		6283FFC82BE4EDF800DA6626 /* TV_SVT_RadioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_SVT_RadioUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6283FFD62BE4EE8A00DA6626 /* radios23.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = radios23.json; sourceTree = "<group>"; };
@@ -241,6 +245,8 @@
 				6283FFBC2BE4EDF800DA6626 /* TV_SVT_RadioTests.swift */,
 				627185B52BE69A4000345F3D /* LoadRadioStationJSON.swift */,
 				627185BF2BE6AA3300345F3D /* PlayRadioTest.swift */,
+				AA0000012BE6000000000002 /* APIClientTests.swift */,
+				AA0000012BE6000000000004 /* MainViewModelTests.swift */,
 			);
 			path = TV_SVT_RadioTests;
 			sourceTree = "<group>";
@@ -429,6 +435,8 @@
 				627185C02BE6AA3300345F3D /* PlayRadioTest.swift in Sources */,
 				6283FFBD2BE4EDF800DA6626 /* TV_SVT_RadioTests.swift in Sources */,
 				627185C12BE6ABE700345F3D /* PlayRadio.swift in Sources */,
+				AA0000012BE6000000000001 /* APIClientTests.swift in Sources */,
+				AA0000012BE6000000000003 /* MainViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
