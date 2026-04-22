@@ -10,9 +10,9 @@ import SwiftUI
 
 class LoadRadioStationJSONFile {
     
-    var radioStations: [radioStationInfo] = []
+    var radioStations: [RadioStation] = []
     
-         func loadStation(fileName: String = "radios23") -> [radioStationInfo] {
+         func loadStation(fileName: String = "radios23") -> [RadioStation] {
         
         guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
             return []
@@ -21,7 +21,7 @@ class LoadRadioStationJSONFile {
         do {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
-            radioStations = try decoder.decode([radioStationInfo].self, from: data)
+            radioStations = try decoder.decode([RadioStation].self, from: data)
     
             return radioStations
                 

@@ -1,30 +1,17 @@
 //
-//  NewRadioObj.swift
-//  playerSwiftUI
+//  radioStationInfo.swift
+//  TV_SVT_Radio
 //
 //  Created by Alvar Arias on 2024-04-30.
 //
-
+//  DEPRECATED: Use RadioStation instead
+//  This file is maintained for backwards compatibility only
+//
 
 import Foundation
-import UIKit
 
+/// Backwards compatibility typealias for RadioStation
+/// All new code should use RadioStation directly
+typealias radioStationInfo = RadioStation
 
-
-struct radioStationInfo: Hashable, Codable  {
-
-    let image: String
-    let imagetemplate: String
-    let color: String
-    let tagline: String
-    let siteurl: String
-    let url: String
-    let scheduleurl: String
-    let xmltvid: String
-    //var isFavorite: Bool
-    let name: String
-    let id: String
-    
-    
-}
 

@@ -16,7 +16,7 @@ struct MainView: View {
     var radioStationLoader = LoadRadioStationJSONFile()
     var radioPlayer = PlayRadio()
 
-    @State private var radioStations: [radioStationInfo] = []
+    @State private var radioStations: [RadioStation] = []
     @State private var isPlaying = false
     @State private var urlRadioStationHome: String = myUrlRadioStationHome
     @State private var urlImageRadioSelected: String = myUrlImageRadioSelected
@@ -108,7 +108,7 @@ struct MainView: View {
 
 // MARK: - Carrusel de estaciones reutilizable
 struct RadioStationCarousel: View {
-    @Binding var radioStations: [radioStationInfo]
+    @Binding var radioStations: [RadioStation]
     @Binding var isPlaying: Bool
     @Binding var urlImageRadioSelected: String
     @Binding var nameRadio: String
