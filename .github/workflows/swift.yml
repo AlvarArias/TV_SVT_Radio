@@ -15,9 +15,10 @@ jobs:
     runs-on: macos-latest
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v4
     - name: Resolve Swift Packages
-      run: xcodebuild -resolvePackageDependencies
-    - uses: actions/checkout@v4
+      run: xcodebuild -resolvePackageDependencies -project TV_SVT_Radio.xcodeproj
     - name: Build
-      run: xcodebuild -scheme "TV_SVT_Radio" build
+      run: xcodebuild -scheme "TV_SVT_Radio" build CODE_SIGNING_ALLOWED=NO
      
