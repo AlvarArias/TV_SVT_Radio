@@ -1,42 +1,55 @@
 # TV_SVT_Radio
 
-TV_SVT_Radio es una aplicación desarrollada en Swift para iOS que permite acceder y escuchar canales de radio y TV, especialmente de la red SVT.
+![Swift](https://img.shields.io/badge/Swift-5.9-orange?style=flat&logo=swift)
+![iOS](https://img.shields.io/badge/iOS-16+-blue?style=flat&logo=apple)
+![CI](https://github.com/AlvarArias/TV_SVT_Radio/actions/workflows/ios.yml/badge.svg)
+![License](https://img.shields.io/badge/license-MIT-lightgrey?style=flat)
 
-## Características principales
+iOS app written in Swift for streaming SVT radio and TV channels. Features background playback, metadata display, and a lightweight architecture ready for unit testing and CI with GitHub Actions.
 
-- Listado de canales de TV y estaciones de radio.
-- Reproducción en streaming.
-- Interfaz sencilla y amigable.
-- Soporte para pruebas unitarias y de interfaz.
+## Features
 
-## Instalación
+- Stream SVT radio and TV channels in real time
+- Background audio playback with lock screen controls
+- Metadata display — current title and programme info
+- Basic playback controls
+- Unit and UI test suites
+- CI/CD pipeline via GitHub Actions
 
-1. Clona este repositorio:
-    ```bash
-    git clone https://github.com/AlvarArias/TV_SVT_Radio.git
-    ```
-2. Abre el proyecto en Xcode.
-3. Instala las dependencias si las hay (CocoaPods, Swift Package Manager, etc.).
-4. Ejecuta en un simulador o dispositivo físico.
+## Getting Started
 
-## Uso
+```bash
+git clone https://github.com/AlvarArias/TV_SVT_Radio.git
+cd TV_SVT_Radio
+open TV_SVT_Radio.xcodeproj
+```
 
-Abre la app, selecciona un canal o estación y comienza a disfrutar del contenido en vivo.
+> Requires Xcode 15+ and an iOS 16 simulator or physical device.
 
-## Estructura del proyecto
+## Project Structure
 
-- `TV_SVT_Radio/` - Código fuente principal de la app.
-- `TV_SVT_RadioTests/` - Pruebas unitarias.
-- `TV_SVT_RadioUITests/` - Pruebas de interfaz.
+| Folder | Description |
+|--------|-------------|
+| `TV_SVT_Radio/` | Main app source code |
+| `TV_SVT_RadioTests/` | Unit tests |
+| `TV_SVT_RadioUITests/` | UI tests |
+| `.github/workflows/` | GitHub Actions CI pipelines |
 
-## Contribuciones
+## CI/CD
 
-¡Las contribuciones son bienvenidas! Por favor, abre un issue o pull request para sugerir mejoras o arreglar errores.
+The project includes two GitHub Actions workflows that run on every push and pull request to `main`:
 
-## Licencia
+- **`ios.yml`** — builds and runs tests on the iOS Simulator
+- **`swift.yml`** — resolves Swift packages and builds the scheme
 
-Este proyecto está bajo la licencia [MIT](LICENSE).
+## Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request to suggest improvements or fix bugs.
+
+## License
+
+This project is available under the [MIT](LICENSE) license.
 
 ---
 
-Desarrollado por [AlvarArias](https://github.com/AlvarArias)
+Developed by [Alvar Arias](https://github.com/AlvarArias) · [LinkedIn](https://www.linkedin.com/in/alvararias/) · [Portfolio](https://alvararias.github.io/)
